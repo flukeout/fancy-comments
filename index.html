@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <link rel="stylesheet/less" href="style.less" type="text/css">
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+
+    <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="hammer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.hammer.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <script src="less.js"></script>
+    <meta name="viewport" content="width=320, user-scalable=no">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+    <div class="info">
+      <h1>Fancy Comments</h1>
+      <p>Inline HTML comments are often used by educators to annotate projects that they share with their students.</p>
+
+      <h2>BUT</h2>
+      <ul>
+        <li>Comments are ugly!</li>
+        <li>They clutter up the page!</li>
+        <li>They don't highlight what they're related to!</li>
+        <li>They don't guide a learner though a page.</li>
+      </ul>
+
+      <p>What if we had an automatic way to convert HMTL comments inside of an editor into a cool step-by-step walkthrough?
+        </p>
+
+        <p>Turn on fancy comments and try it out...</p>
+      <div class="editor-toggle"><span class="fa fa-flash"></span> Toggle Fancy Comments</div>
+      <p class="note"><strong>Note:</strong>
+        I'm faking the multi-line highlight but I've got some ideas for how to make it work automatically!
+      </p>
+
+    </div>
+
+    <div class="editor original">
+
+
+    <pre>
+<t>&lt;html&gt;</t></pre>
+  <div class="comment">
+    <div class="comment-original">
+
+     <pre>
+  &lt;!--
+  The head tag contains important information
+  about this web page, like the title, which appears
+  in the tab when a page is opened.
+  --></pre>
+  </div>
+
+    <div class="comment-text">
+      The head tag contains important information about this web page, like the title, which appears in the tab when a page is opened.
+      <div class="close-comment fa fa-remove"></div>
+      <div class="comment-ui">
+        Comment <span class="this-comment"></span>/<span class="total-comments"></span>
+        <a href="#" class="fa fa-chevron-up previous-comment"></a>
+        <a href="#" class="fa fa-chevron-down next-comment"></a>
+      </div>
+      <div class="arrow"></div>
+    </div>
+    <div class="comment-code"><div class="bubble fa fa-comment"></div>
+    <pre>
+  <t>&lt;head&gt;</t>
+    <t>&lt;title&gt;</t>Bramble<t>&lt;/title&gt;</t>
+  <t>&lt;/head&gt;</t></pre>
+    </div>
+  </div>
+  <pre>
+<t>  &lt;body&gt;</t></pre>
+  <div class="comment">
+    <div class="comment-original">
+     <pre>
+    &lt;!--
+    This is a paragraph, use it to add text!
+    --></pre>
+  </div>
+
+    <div class="comment-text">
+ This is a paragraph, use it to add text!
+      <div class="close-comment fa fa-remove"></div>
+      <div class="comment-ui">
+        Comment <span class="this-comment"></span>/<span class="total-comments"></span>
+        <a href="#" class="fa fa-chevron-up previous-comment"></a>
+        <a href="#" class="fa fa-chevron-down next-comment"></a>
+      </div>
+      <div class="arrow"></div>
+    </div>
+    <div class="comment-code"><div class="bubble fa fa-comment"></div>
+    <pre>
+    <t>&lt;p&gt;</t>Hello World<t>&lt;/p&gt;</t></pre></div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-original">
+     <pre>
+    &lt;!--
+    This is an unordered list. You can add as many
+    items as you want! When viewed, bullets will be
+    added automatically!
+    --></pre>
+  </div>
+
+
+    <div class="comment-text">
+
+      This is an unordered list. It you can add as many items as you want, and HTML automatically adds bullet points!
+      <div class="close-comment fa fa-remove"></div>
+      <div class="comment-ui">
+        Comment <span class="this-comment"></span>/<span class="total-comments"></span>
+        <a href="#" class="fa fa-chevron-up previous-comment"></a>
+        <a href="#" class="fa fa-chevron-down next-comment"></a>
+      </div>
+      <div class="arrow"></div>
+    </div>
+    <div class="comment-code"><div class="bubble fa fa-comment"></div>
+    <pre>
+<t>    &lt;ul&gt;</t>
+  <t>    &lt;li&gt;</t>List Item 1<t>&lt;/li&gt;</t>
+<t>      &lt;li&gt;</t>List Item 2<t>&lt;/li&gt;</t>
+  <t>    &lt;li&gt;</t>List Item 2<t>&lt;/li&gt;</t>
+    <t>&lt;/ul&gt;</t></pre>
+    </div>
+  </div>
+
+  <pre>
+<t>  &lt;/body&gt;</t>
+<t>&lt;/html&gt;</t></pre>
+  </div>
+</div>
+  </body>
+</html>
